@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manufacturing+Consent&display=swap" rel="stylesheet">
+
+  <title>EventPro - Event Management System</title>
+  <link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">EventPro</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="/login" class="btn">Login</a>
+  </nav>
+
+  <header class="hero">
+    <h1>Make Your Event Unforgettable</h1>
+    <p>Plan, manage, and host your events all in one place.</p>
+    <a href="/register" class="btn hero-btn">Get Started</a>
+  </header>
+
+  <section id="features" class="features">
+    <h2 class="feat">Our Features</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>Easy Event Creation</h3>
+        <p>Create events quickly with all necessary details.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Attendee Management</h3>
+        <p>Track RSVPs and manage guest lists with ease.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Analytics</h3>
+        <p>View attendance and engagement reports.</p>
+      </div>
+    </div>
+  </section>
+
+<section id="events" class="events">
+  <h2 >Upcoming Events</h2>
+  <div class="events-grid">
+    <div class="event-card" data-aos="fade-right">
+      <h3>Tech Conference 2025</h3>
+      <p>Join the brightest minds in tech innovation.</p>
+    </div>
+    <div class="event-card" data-aos="fade-left">
+      <h3>Startup Meetup</h3>
+      <p>Connect with local entrepreneurs and investors.</p>
+    </div>
+  </div>
+</section>
+
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 EventPro. All rights reserved.</p>
+  </footer>
+
+  
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  alert("Message sent! We will contact you soon.");
+  this.reset();
+});
+</script>
+
+
+</html>
