@@ -9,7 +9,7 @@ app.secret_key = '2024@darsh'
 @app.route('/')
 def home():
     return render_template('index.html')
-@app.route('/register', methods=['GET', 'POST'])
+@app.route('/templates/register.html', methods=['GET', 'POST'])
 
 def register():
     if request.method == 'POST':
@@ -20,14 +20,14 @@ def register():
         conn = get_db_connection()
         cursor = conn.cursor()
 
-        # Check if email already exists
+        # Check
         cursor.execute("SELECT * FROM users WHERE email=%s", (email,))
         existing_user = cursor.fetchone()
         if existing_user:
             flash('Email already registered.')
             return redirect(url_for('register'))
 
-        # Insert user
+        # InsertUser
         cursor.execute("INSERT INTO users (name, email, password) VALUES (%s, %s, %s)",
                        (name, email, password))
         conn.commit()
