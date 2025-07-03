@@ -9,7 +9,34 @@ app.secret_key = '2024@darsh'
 @app.route('/')
 def home():
     return render_template('index.html')
+@app.route('/register', methods=['GET', 'POST'])
 
+def register():
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        password = generate_password_hash(request.form['password'])
+
+        conn = get_db_connection()
+        cursor = conn.cursor()
+
+        # Check if email already exists
+        cursor.execute("SELECT * FROM users WHERE email=%s", (email,))
+        existing_user = cursor.fetchone()
+        if existing_user:
+            flash('Email already registered.')
+            return redirect(url_for('register'))
+
+        # Insert user
+        cursor.execute("INSERT INTO users (name, email, password) VALUES (%s, %s, %s)",
+                       (name, email, password))
+        conn.commit()
+        cursor.close()
+        conn.close()
+
+        flash('Registration successful. Please log in.')
+        return redirect(url_for('login'))
+    return render_template('register.html')
 
 
 if __name__ == '__main__':

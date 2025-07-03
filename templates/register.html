@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event Management System</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="page">
+    <nav class="navbar">
+      <div class="logo">Eventify</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Register</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <button class="btn">Login</button>
+    </nav>
+
+    <div class="container" data-aos="fade-up">
+      <h2 class="feat">Register</h2>
+      <form>
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="password" placeholder="Password" required />
+        <input type="submit" value="Sign Up" />
+      </form>
+      <p style="text-align: center; margin-top: 10px;">
+        Already have an account? <a href="#">Login here</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
