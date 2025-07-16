@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Event Management System</title>
+  <link rel="stylesheet" href="/static/stylelog.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-    
+  <div class="page">
+    <nav class="navbar">
+      <div class="logo">EventPro</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Register</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <button class="btn">Register</button>
+    </nav>
+
+    <div class="container" data-aos="zoom-in">
+      <h2 class="feat">Login</h2>
+      <form>
+        <input type="email" placeholder="Email Address" required />
+        <input type="password" placeholder="Password" required />
+        <input type="submit" value="Login" />
+      </form>
+      <p style="text-align: center; margin-top: 10px;">
+        Don't have an account? <a href="#">Register here</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

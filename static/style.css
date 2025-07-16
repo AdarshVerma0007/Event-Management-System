@@ -38,7 +38,7 @@ a {
 .logo{
    font-family: "Bitcount Grid Double", system-ui;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 800;;
   font-style: normal;
   font-variation-settings:
     "slnt" 0,
@@ -51,7 +51,7 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
+  
 }
 .nav-links {
   list-style: none;

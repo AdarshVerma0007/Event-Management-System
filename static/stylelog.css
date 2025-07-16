@@ -13,21 +13,9 @@ body {
 }
 
 .feat {
-     font-family: "Manufacturing Consent", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings:
-    "slnt" 0,
-    "CRSV" 0.5,
-    "ELSH" 0,
-    "ELXP" 0;
-   font-size: 3rem;
-  font-weight: 800;
-  background: url('/static/mb.jpg') center/cover no-repeat;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  
+    font-family: "Manufacturing Consent", system-ui, sans-serif;
+    font-size: 38px;
+    font-weight: 600;
 }
 
 .navbar {
@@ -40,12 +28,7 @@ body {
     width: 100%;
     box-sizing: border-box;
 }
-.log{
-    text-align: center;
-}
-.log a:hover {
-    color: #ff5722;
-}
+
 .navbar .logo {
     font-family: "Bitcount Grid Double", system-ui, sans-serif;
     font-optical-sizing: auto;
@@ -55,13 +38,13 @@ body {
         "CRSV" 0.5,
         "ELSH" 0,
         "ELXP" 0;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 800;
     background: url('/static/log.jpg') center/cover no-repeat;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    
+    text-fill-color: transparent;
 }
 
 .nav-links {
@@ -91,7 +74,6 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
-    
 }
 
 .btn:hover {
@@ -113,7 +95,6 @@ body {
     margin-bottom: 20px;
 }
 
-form input[type="text"],
 form input[type="email"],
 form input[type="password"] {
     width: 100%;
